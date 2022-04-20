@@ -49,7 +49,7 @@ class TransClassifier():
         ndf = 256
         
         #build labels first
-#         train_labels_all = torch.from_numpy(np.tile(np.arange(n_rots), x_train.shape[0]//n_rots)).long().cuda()
+        #train_labels_all = torch.from_numpy(np.tile(np.arange(n_rots), x_train.shape[0]//n_rots)).long().cuda()
 
         for epoch in range(self.args.epochs):
             rp = np.random.permutation(N//n_rots)
@@ -92,7 +92,7 @@ class TransClassifier():
             all_zs = torch.reshape(all_zs, (N//n_rots, n_rots, ndf))
             means = all_zs.mean(0, keepdim=True)
 
-
+### Our new validation score
             with torch.no_grad():
                 batch_size = bs
                 train_z_list, train_y_list = [], []
