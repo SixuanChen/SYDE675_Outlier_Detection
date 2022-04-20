@@ -1,5 +1,6 @@
 import torch
 import torch.nn as nn
+#refer from https://github.com/zengyi-li/NMCE-release
 
 class MaximalCodingRateReduction(torch.nn.Module):
     def __init__(self, eps=0.01, gamma=1):
