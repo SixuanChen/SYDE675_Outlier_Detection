@@ -24,7 +24,7 @@ To replicate the results of the paper on CIFAR10 with widen factor 4:
 ```
 python train_ad.py --m=0.1
 ```
-New results will be saved in new text file called results_CIFAR10_MCR2_10.txt
+New results will be saved in new text file called results_CIFAR10_MCR2_4.txt
 
 ### In order to change the widen factor, you can visit train_ad.py:
 ```
