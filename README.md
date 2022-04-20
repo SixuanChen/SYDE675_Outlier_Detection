@@ -10,7 +10,7 @@
 ## Changes
 ### We added the MCR2.py
 ### The changed files from GOAD repo are opt_tc.py and train_ad.py. The old codes were commented out.
-
+### You can compare it with the opt_tc_old.py 
 
 
 ## Results
@@ -20,7 +20,7 @@
 
 ## Training
 
-To replicate the results of the paper on CIFAR10 with widen factor 10:
+To replicate the results of the paper on CIFAR10 with widen factor 4:
 ```
 python train_ad.py --m=0.1
 ```

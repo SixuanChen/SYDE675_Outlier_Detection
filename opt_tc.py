@@ -24,8 +24,9 @@ class TransClassifier():
         self.n_trans = num_trans
         self.args = args
 #         self.netWRN = WideResNet(self.args.depth, num_trans, self.args.widen_factor).cuda()
-# Number of trans = 10 We want to have 10 or more dimensions within each trans feature space sub space
-#so we do 128 dimension 
+
+# Number of trans = 10 We want to have three or more dimensions within each trans feature space sub space
+#so we do 32 dimension 
         print("number of trans"+str(num_trans))
         self.netWRN = WideResNet(self.args.depth, 32, self.args.widen_factor).cuda()
         self.optimizer = torch.optim.Adam(self.netWRN.parameters())
@@ -39,8 +40,8 @@ class TransClassifier():
         n_rots = self.n_trans
         m = self.args.m
 #         celoss = torch.nn.CrossEntropyLoss()
-# Change to MCR2_loss Create objects
 
+####### Change to MCR2_loss Create objects
 
         MCR2_loss = MaximalCodingRateReduction(eps=0.2, gamma=0.8)
 
@@ -143,7 +144,7 @@ class TransClassifier():
                 val_scores = -val_scores.reshape((-1,8)).sum(1)
 #                 print(val_scores.shape)
                 print("Epoch:", epoch, ", AUC: ", roc_auc_score(y_test, val_scores))
-                fo = open("results_CIFAR10_MCR2_10.txt","a")
+                fo = open("results_CIFAR10_MCR2_4.txt","a")
                 string_list = ("Epoch:"+ str(epoch) +", AUC: "+ str(roc_auc_score(y_test, val_scores))+"\n")
                 fo.write(string_list)
 

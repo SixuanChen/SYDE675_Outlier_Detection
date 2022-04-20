@@ -46,7 +46,7 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='Wide Residual Networks')
     # Model options
     parser.add_argument('--depth', default=10, type=int)
-    parser.add_argument('--widen-factor', default=10, type=int)
+    parser.add_argument('--widen-factor', default=4, type=int)
 
     # Training options
     parser.add_argument('--batch_size', default=1000, type=int)
@@ -74,7 +74,7 @@ if __name__ == '__main__':
         print("True Class:", args.class_ind)
         train_anomaly_detector(args)
         results_list = "Dataset: CIFAR10"+"True Class:"+ str(args.class_ind)+"\n"
-        file_name ="results_CIFAR10_MCR2_10.txt"
+        file_name ="results_CIFAR10_MCR2_4.txt"
         with open(file_name, 'a') as f:
             f.write(results_list )
     
