@@ -46,7 +46,7 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='Wide Residual Networks')
     # Model options
     parser.add_argument('--depth', default=10, type=int)
-    parser.add_argument('--widen-factor', default=8, type=int)
+    parser.add_argument('--widen-factor', default=10, type=int)
 
     # Training options
     parser.add_argument('--batch_size', default=1000, type=int)
