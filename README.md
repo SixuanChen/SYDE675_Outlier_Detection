@@ -14,4 +14,5 @@ To replicate the results of the paper on CIFAR10:
 ```
 python train_ad.py --m=0.1
 ```
-## The changed files are opt_tc.py and train_ad.py. The old codes were commented out.
+## We added the MCR2.py
+## The changed files from GOAD repo are opt_tc.py and train_ad.py. The old codes were commented out.
