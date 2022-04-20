@@ -15,7 +15,7 @@
 
 ## Results
 ### The results of orginal GOAD with simple transformation is recorded in the results_CIFAR10_simple_trans.txt
-### Our new results of widen factor 4,6,8,10 are recorded in results_CIFAR10_MCR2.txt
+### Our new results of widen factor 4,6,8, and 10 are recorded in results_CIFAR10_MCR2.txt
 
 
 ## Training
